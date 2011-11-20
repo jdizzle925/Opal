@@ -51,7 +51,14 @@ class CreatePages < ActiveRecord::Migration
 	pages[:items].deletable = false
 	pages[:items].save 
 	
-	pages[:blog] = Page.new(:title => I18n.t('seeds.page.blog.title'), :description => I18n.t('seeds.page.blog.description'), :page_type => "public", :content => I18n.t('seeds.page.blog.content'))
+	pages[:users] = Page.new(:title => I18n.t('seeds.page.users.title'), :description => I18n.t('seeds.page.users.description'), :page_type => "public", :content => I18n.t('seeds.page.users.content'))
+	pages[:users].name = "users"
+	pages[:users].locked = true
+	pages[:users].title_editable = false
+	pages[:users].deletable = false
+	pages[:users].save
+
+  pages[:blog] = Page.new(:title => I18n.t('seeds.page.blog.title'), :description => I18n.t('seeds.page.blog.description'), :page_type => "public", :content => I18n.t('seeds.page.blog.content'))
 	pages[:blog].name = "blog"
 	pages[:blog].locked = true
 	pages[:blog].deletable = false

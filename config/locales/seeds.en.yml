@@ -57,6 +57,10 @@ en:
         title: "Items"
         description: ""
         content: ""
+      users:
+        title: "Users"
+        description: ""
+        content: ""
       blog:
         title: "Blog"
         description: ""
